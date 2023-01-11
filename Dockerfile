@@ -8,10 +8,10 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install app dependencies
-RUN npm install
+RUN yarn install
 
 # Bundle app source
 COPY . .
 
 # Creates a "dist" folder with the production build
-RUN npm build
+RUN yarn build
